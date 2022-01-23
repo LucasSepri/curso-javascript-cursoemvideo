@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- WebSite formats -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Loja Virtual, initial-scale=1.0">
+
+    <!-- title WebSite-->
+    <title>Aula de JavaScript</title>
+
+    
+    <!-- stylization paths; Css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- css pag -->
+    <style>
+        body{
+            background-color: white;
+            font: normal 20pt arial;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        document.writeln(`Olá <strong>${nome}</strong> o seu nome tem <strong>${nome.length}</strong> letras. <br>`)
+        document.writeln(`Seu nome em maiúsculas é ${nome.toUpperCase()} <br>`)
+        document.writeln(`Seu nome em maiúsculas é ${nome.toLowerCase()} <br>`)
+
+        // n1.toFixed(2).replace('.', ',')
+        // n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+
+        // var a = 5 + 3
+        // var b = a % 5
+        // var c = 5 * b ** 2
+        // var d = 10 - a / 2
+        // var e = 6 * 2 / d
+        // var f = b % e + 4 / e
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+
+<body>
+    <h1 id="msg"></h1>
+
+    
+
+    <script>
+        var agora = new Date()
+        var hora = agora.getTime()
+        if (hora < 12) {
+            // window.alert('Bom Dia!')
+            window.document.body.style.backgroundColor = 'white'
+            window.document.getElementById('msg').innerHTML = 'BOM DIA!'
+            document.getElementById('msg').style.color="black"
+        } else if (hora <= 18) {
+            // window.alert('Bom Tarde!')
+            window.document.body.style.backgroundColor = 'gray'
+            window.document.getElementById('msg').innerHTML = 'BOA TARDE!'
+            window.document.getElementById('msg').innerHTML = 'BOM DIA!'
+            document.getElementById('msg').style.color="white"
+        } else {
+            // window.alert('Boa Noite!')
+            window.document.body.style.backgroundColor = 'black'
+            window.document.getElementById('msg').innerHTML = 'BOA NOITE!'
+            document.getElementById('msg').style.color="white"
+        }
+
+        document.writeln('<img src="https://media-exp1.licdn.com/dms/image/C560BAQHMnA03XDdf3w/company-logo_200_200/0/1519855918965?e=2159024400&v=beta&t=CrP5Le1mWICRcaxIGNBuajHcHGFPuyNA5C8DI339lSk">')
+    </script>
+</body>
+
+</html>

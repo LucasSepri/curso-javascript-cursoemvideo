@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+</head>
+
+<body>
+    <div class="atv1"
+        style="background-color: rgb(35, 57, 61); color: white; padding: 20px 0 50px; margin-bottom: 20px; text-align: center;">
+        <!--  atividade 2 -->
+
+
+        <h1>Sistemas de Multas</h1>
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel">Km/h
+        <input type="button" value="Verificar" onclick="verificar()">
+        <div id="res"></div>
+    </div>
+
+
+
+    <div class="atv2"
+        style="background-color: rgb(42, 82, 47); color: white;padding: 20px 0 50px; text-align: center;margin-bottom: 20px;">
+        <!--  atividade 2 -->
+
+
+        <h1>Detector de Estrangeiro</h1>
+        Seu País de Origem:
+        <select id="pais" style="padding: 5px 20px;">
+            <option value="EUA">EUA</option>
+            <option value="Fraça" selected>Fraça</option>
+            <option value="Brasil">Brasil</option>
+        </select>
+        <input type="button" value="Verificar" onclick="verificar2()">
+        <p style="font-size: 30px;"><strong id="res2"></strong></p>
+    </div>
+
+    <script>
+        function verificar() {
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.querySelector('#res')
+            var vel = Number(txtv.value)
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} Km/h</strong></p>`
+
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por exesso de velocidade!`
+            } else if (vel < 26) {
+                res.innerHTML += `<p>Você está muito devagar</p>`
+            } else {
+                res.innerHTML += `<p>Dirija Sempre com cinto de Segurança!</p>`
+            }
+        }
+
+        function verificar2() {
+            var pais = document.getElementById('pais');
+            var option = pais.options[pais.selectedIndex];    
+            
+            var ver = window.document.querySelector('#res2')
+
+            if (option.text == 'Brasil') {
+                ver.innerHTML = `Você não é estrangeiro, é Brasileiro S2!`
+            } else {
+                ver.innerHTML = `Você é Estrangeiro!`
+            }
+        }
+    </script>
+</body>
+
+</html>
